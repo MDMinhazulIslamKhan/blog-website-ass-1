@@ -5,7 +5,7 @@
 #### Get all blogs (get route) ####
 - /v1/public/getAllBlogs [Link]('https://blog-website-ass-1.vercel.app/v1/public/getAllBlogs')
 #### Get blog details(get route) ####
-- /v1/public/blogDetails/:id (here use individual blogs id which is automatically create by mongoDb)
+- /v1/public/blogDetails/:id (here use individual blogs id which is automatically create by mongoDB)
 #### Create blog(post route) ####
 - /v1/public/createBlog (post your data from body request. And must give this data: userName, blogTitle blogDescription.)
 
