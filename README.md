@@ -8,6 +8,8 @@
 - /v1/public/blogDetails/:id (here use individual blogs id which is automatically create by mongoDB)
 #### Create blog(post route) ####
 - /v1/public/createBlog (post your data from body request. And must give this data: userName, blogTitle blogDescription.)
+#### Delete blog(delete route) ####
+- /v1/public/deleteBlog:id (here use individual blog's id which is automatically create by mongoDB)
 
 ---
 ###  **Used technology:**

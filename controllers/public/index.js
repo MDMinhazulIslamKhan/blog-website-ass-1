@@ -36,3 +36,12 @@ export const getBlogDetails = async (req, res) => {
         res.status(404).json({ message: error });
     }
 };
+
+// delete individual blog controller
+export const deleteBlog = async (req, res) => {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No blog with that id');
+
+    await PostBlog.findByIdAndRemove(id);
+    res.json({ message: 'Delete Successful' });
+};
