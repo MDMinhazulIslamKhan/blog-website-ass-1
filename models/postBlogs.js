@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// blogs schema or model
 const blogSchema = mongoose.Schema({
     userName: {
         type: String,

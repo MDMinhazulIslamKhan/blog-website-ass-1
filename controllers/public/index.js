@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import PostBlog from "../../models/postBlogs.js";
 
+// blog post controller
 export const createBlog = async (req, res) => {
     const blog = req.body;
 
@@ -14,6 +15,7 @@ export const createBlog = async (req, res) => {
     }
 };
 
+// get all blogs controller
 export const getAllBlogs = async (req, res) => {
     try {
         const allBlogs = await PostBlog.find();
@@ -23,6 +25,7 @@ export const getAllBlogs = async (req, res) => {
     }
 };
 
+// get individual blog controller
 export const getBlogDetails = async (req, res) => {
     const { id } = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No blog with that id');

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'; //for storing environment variable
 
 import PublicRoute from './routes/v1/public/index.js';
 
@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-
+// mongodb connection url
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.usk5q3y.mongodb.net/`;
 
 // Database name
